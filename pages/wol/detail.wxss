@@ -1,1 +1,10 @@
 /* pages/wol/detail.wxss */
+
+.menu {
+    margin-top: 20rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  

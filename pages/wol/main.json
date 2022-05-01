@@ -1,3 +1,9 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "mp-icon": "weui-miniprogram/icon/icon",
+        "mp-cells": "weui-miniprogram/cells/cells",
+        "mp-cell": "weui-miniprogram/cell/cell",
+        "mp-slideview": "weui-miniprogram/slideview/slideview"
+    },
+    "navigationBarTitleText": "网络唤醒(WOL)"
 }

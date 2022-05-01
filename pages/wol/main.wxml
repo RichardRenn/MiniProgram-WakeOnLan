@@ -1,2 +1,41 @@
 <!--pages/wol/main.wxml-->
-<text>pages/wol/main.wxml</text>
+<!-- <text>pages/wol/main.wxml</text> -->
+<view class="page__bd">
+
+<mp-cells ext-class="" title="{{packets.length>0 ? '点击可修改，左滑可删除' : '点击 + 新建一条记录'}}" footer="">
+
+  <mp-cell hover wx:for="{{packets}}" wx:for-item="item" wx:key="index">
+    <mp-slideview ext-class="" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-idx="{{index}}">
+      <!-- <mp-cell link hover url="./detail?idx={{index}}" data-idx="{{index}}"> -->
+      <view class="flex-row">
+        <view class="flex-row pc-icon-view" bindtap="tapItem" data-idx="{{index}}">
+          <mp-icon icon="display" type="outline" size="{{iconSize}}" color="{{iconColor}}"></mp-icon>
+        </view>
+        <view class="flex-row packet-name-view" bindtap="tapItem" data-idx="{{index}}">
+          <text class="packet-name-text">{{item.name ? item.name : '未命名'}}</text>
+          <!-- <view>{{item.ip ? item.ip : '255.255.255.255'}}:{{item.port ? item.port : 9}}</view> -->
+          <!-- <view>{{item.macAddr}}</view> -->
+        </view>
+        <view class="flex-row wake-btn-view" hover-class="hover-scale" bindtap="wakeCurrentItem" data-idx="{{index}}">
+          <!-- <button class="weui-btn" bindtap="wakeCurrentItem" data-idx="{{index}}" size='mini' type="primary" hover-class="hover-scale">唤醒</button> -->
+          <text>唤醒</text>
+        </view>
+      </view>
+      <!-- </mp-cell> -->
+    </mp-slideview>
+  </mp-cell>
+
+</mp-cells>
+
+<!-- <mp-cells ext-class="" title="" footer="{{packets.length==0 ? '' : '点击 + 新建一条记录'}}"> -->
+<!-- <mp-cell link hover url="./detail"> -->
+<mp-cell hover bindtap="createItem">
+  <view class="flex-row">
+    <!-- <button class="weui-btn" bindtap="createItem" type="primary" hover-class="hover-scale">新建</button> -->
+    <mp-icon icon="add" size="{{iconSize}}" color="{{iconColor}}"></mp-icon>
+  </view>
+</mp-cell>
+<!-- </mp-cells> -->
+
+
+</view>

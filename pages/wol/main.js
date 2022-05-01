@@ -1,6 +1,7 @@
 // pages/wol/main.js
-Page({
+var app = getApp()
 
+Page({
     /**
      * 页面的初始数据
      */
@@ -143,7 +144,7 @@ Page({
                 message: magicPacket
             })
             wx.showToast({
-                title: '已发送',
+                title: '指令已发送',
             })
         }
     },
@@ -180,7 +181,7 @@ Page({
     /**
      * 滑动删除操作
      */
-    slideButtonTa(e) {
+    slideButtonTap(e) {
         var that = this
         var packets = that.data.packets
         var idx = e.currentTarget.dataset.idx

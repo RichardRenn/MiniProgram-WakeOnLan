@@ -1,2 +1,32 @@
 <!--pages/wol/detail.wxml-->
-<text>pages/wol/detail.wxml</text>
+<!-- <text>pages/wol/detail.wxml</text> -->
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+<view class="page">
+  <view class="page__bd">
+
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+      <mp-cells title="" footer="">
+        <mp-cell prop="name" title="名称" ext-class="">
+          <input bindinput="formInputChange" data-field="name" class="weui-input" type="text" placeholder="可不填" value="{{formData.name}}" />
+        </mp-cell>
+        <mp-cell prop="ip" title="IP" ext-class="">
+          <input bindinput="formInputChange" data-field="ip" class="weui-input" type="text" placeholder="可不填,默认255.255.255.255" value="{{formData.ip}}" />
+        </mp-cell>
+        <mp-cell prop="port" title="端口" ext-class="">
+          <input bindinput="formInputChange" data-field="port" class="weui-input" type="digit" placeholder="可不填,默认9" value="{{formData.port}}" />
+        </mp-cell>
+        <mp-cell prop="macAddr" title="MAC地址" ext-class="">
+          <input bindinput="formInputChange" data-field="macAddr" class="weui-input" type="text" placeholder="如:00-11-22-33-AA-BB" value="{{formData.macAddr}}" />
+        </mp-cell>
+      </mp-cells>
+    </mp-form>
+
+    <view class="weui-btn-area">
+      <button bindtap="clickSave" class="weui-btn" type="primary">保存</button>
+      <button bindtap="clickDelete" class="weui-btn" type="warn" wx:if="{{mode == 2}}">删除</button>
+      <!-- <button bindtap="clickDelete" class="weui-btn" type="warn" disabled="{{mode == 1}}">删除</button> -->
+    </view>
+
+  </view>
+</view>

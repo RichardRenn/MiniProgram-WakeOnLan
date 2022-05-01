@@ -14,6 +14,8 @@ App({
         })
     },
     globalData: {
+        green: '#07C160',
+        red: '#FA5151',
         userInfo: null
     }
 })
