@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-    <view class="userinfo">
+    <!-- <view class="userinfo">
         <block wx:if="{{canIUseOpenData}}">
             <view class="userinfo-avatar" bindtap="bindViewTap">
                 <open-data type="userAvatarUrl"></open-data>
@@ -19,5 +19,5 @@
     </view>
     <view class="usermotto">
         <text class="user-motto">{{motto}}</text>
-    </view>
+    </view> -->
 </view>
