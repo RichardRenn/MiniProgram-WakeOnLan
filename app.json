@@ -1,19 +1,19 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/wol/main",
-    "pages/wol/detail"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WOL",
-    "navigationBarTextStyle":"black"
-  },
-  "useExtendedLib": {
-    "weui": true
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/wol/main",
+        "pages/wol/detail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WOL",
+        "navigationBarTextStyle": "black"
+    },
+    "useExtendedLib": {
+        "weui": true
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }
