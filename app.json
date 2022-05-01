@@ -1,8 +1,8 @@
 {
     "pages": [
+        "pages/wol/main",
         "pages/index/index",
         "pages/logs/logs",
-        "pages/wol/main",
         "pages/wol/detail"
     ],
     "window": {
